@@ -28,8 +28,8 @@ shot-timer-mk1/
 │   ├── BOM.csv                     Parts list
 │   ├── WIRING.md                   Wiring and protoboard layout
 │   ├── schematic/                  KiCad project + PDF export
-│   └── enclosure/                  STL / 3MF print files + drawing package
-└── docs/                           User manual, quick-start card, hardware build guide
+│   └── enclosure/                  STL / 3MF print files, USB port plug, drawing package
+└── docs/                           Project Book, user manual, quick-start card, hardware build guide
 ```
 
 | Folder | License |
@@ -63,11 +63,20 @@ Full quantities are in the [parts list (BOM.csv)](hardware/BOM.csv).
 | [Schematic (PDF)](hardware/schematic/shot-timer-mk1_schematic.pdf) | Circuit diagram; open [`hardware/schematic/`](hardware/schematic) in KiCad 7 or newer to edit |
 | [Enclosure drawings](hardware/enclosure/Shot_Timer_Mk1_Enclosure_Drawings.pdf) | Renders, standard views with dimensions, exploded view, part details |
 | [Enclosure print files](hardware/enclosure) | STL bodies for each color and multi-color 3MF projects |
+| [USB port plug](hardware/enclosure/port-plug-measured.stl) | Optional press-fit plug for the USB programming port slot |
 | [User manual, Part 2](docs/Shot_Timer_Mk1_Manual_v1.7.5.pdf) | How the firmware, battery gauge and hardware work |
 
 The enclosure is two PLA+ parts (bottom shell and lid), each printed in several colors.
 All STL files share one coordinate system, so loading them together in a slicer puts every
 color body in place.
+
+### USB port plug (optional)
+
+[`port-plug-measured.stl`](hardware/enclosure/port-plug-measured.stl) is a small press-fit plug
+that covers the 12 × 7 mm USB programming port slot in the end of the bottom shell, keeping
+debris and water out. A grip tab under the flange lets you pull it with a fingernail when you
+need to flash the firmware. It is sized from a measured slot (11.92 × 6.88 mm) with small crush
+ribs for a snug fit in PLA. Print it flange-down; no supports are needed.
 
 > The hardware documentation is a first release. A few wiring details are still being
 > confirmed on a built unit; they are marked ❓ in the build guide and WIRING.md.
@@ -83,6 +92,13 @@ color body in place.
 5. Connect with a data USB cable (not a charge-only cable) and click **Upload**.
 
 Updating keeps the saved threshold, last string and learned battery capacity.
+
+## Project Book
+
+The [Project Book](docs/Shot%20Timer%20MK1%20Project%20Book.pdf) puts everything about the
+Shot Timer MK1 in one document: how it works, hardware and power, firmware and version history,
+the v6 enclosure, the build, a map of all the other documents, design decisions, and the list
+of open items still being confirmed.
 
 ## Using it
 
