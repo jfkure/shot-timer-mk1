@@ -21,11 +21,22 @@ or email order@huckleberryinnovations.com.
 
 ## Repository layout
 
-| Folder | Contents | License |
-|---|---|---|
-| [`firmware/`](firmware) | Arduino sketch (current: v1.7.5) | GPL-3.0-or-later |
-| [`hardware/`](hardware) | Schematic and enclosure files | CERN-OHL-S-2.0 |
-| [`docs/`](docs) | Full user manual and fold-out quick-start card (PDF) | CC BY-SA 4.0 |
+```
+shot-timer-mk1/
+├── firmware/ShotTimerMk1_v1_7_5/   Arduino sketch (current: v1.7.5)
+├── hardware/
+│   ├── BOM.csv                     Parts list
+│   ├── WIRING.md                   Wiring and protoboard layout
+│   ├── schematic/                  KiCad project + PDF export
+│   └── enclosure/                  STL / 3MF print files + drawing package
+└── docs/                           User manual, quick-start card, hardware build guide
+```
+
+| Folder | License |
+|---|---|
+| [`firmware/`](firmware) | GPL-3.0-or-later |
+| [`hardware/`](hardware) | CERN-OHL-S-2.0 |
+| [`docs/`](docs) | CC BY-SA 4.0 |
 
 ## Hardware
 
@@ -37,12 +48,29 @@ or email order@huckleberryinnovations.com.
 | Clip-on lavalier mic, 3.5 mm TRRS jack | Mic input on A0 |
 | Buzzer | D3 |
 | START / STOP buttons | D9 / D8 to ground (internal pull-ups) |
-| White status LED | D13 through 1 kΩ |
+| White status LED (panel mount) | D13 |
 | Latching lit power switch | In the battery + line |
 | 9 V USB-C rechargeable lithium battery | Use rechargeable lithium only |
 
-Wiring details, the battery gauge design and assembly notes are in Part 2 of the
-[user manual](docs/Shot_Timer_Mk1_Manual_v1.7.5.pdf).
+Full quantities are in the [parts list (BOM.csv)](hardware/BOM.csv).
+
+## Building one
+
+| Document | What it covers |
+|---|---|
+| [Hardware Build Guide](docs/Shot_Timer_Mk1_Hardware_Build_Guide.pdf) | Parts and tools, protoboard layout diagram, step-by-step soldering with photos, checkout test, final assembly, packaging |
+| [Wiring and board layout](hardware/WIRING.md) | Every connection, by circuit and protoboard hole |
+| [Schematic (PDF)](hardware/schematic/shot-timer-mk1_schematic.pdf) | Circuit diagram; open [`hardware/schematic/`](hardware/schematic) in KiCad 7 or newer to edit |
+| [Enclosure drawings](hardware/enclosure/Shot_Timer_Mk1_Enclosure_Drawings.pdf) | Renders, standard views with dimensions, exploded view, part details |
+| [Enclosure print files](hardware/enclosure) | STL bodies for each color and multi-color 3MF projects |
+| [User manual, Part 2](docs/Shot_Timer_Mk1_Manual_v1.7.5.pdf) | How the firmware, battery gauge and hardware work |
+
+The enclosure is two PLA+ parts (bottom shell and lid), each printed in several colors.
+All STL files share one coordinate system, so loading them together in a slicer puts every
+color body in place.
+
+> The hardware documentation is a first release. A few wiring details are still being
+> confirmed on a built unit; they are marked ❓ in the build guide and WIRING.md.
 
 ## Flashing the firmware
 

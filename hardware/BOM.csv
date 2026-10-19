@@ -1,0 +1,27 @@
+Ref,Part,Qty per timer,Pack qty,Pack price (USD),Notes
+U1,Arduino Nano (ATmega328P) USB-C,1,3,15.99,Mounted on protoboard rows 16-30
+U2,0.96in SSD1306 OLED 128x64 yellow/blue I2C,1,1,6.99,I2C 0x3C; mounted on underside of protoboard rows 5-8
+U3,INA219 DC current sensor breakout (R100 0.1 ohm shunt),1,3,9.99,I2C 0x40; added 10/16/2026 for battery gauge
+PCB1,ElectroCookie solderable protoboard,1,5,8.79,
+MK1,Clip-on lavalier microphone 3.5mm TRRS,1,1,22.99,Price was 9.99; check stock
+J1,TRRS 3.5mm breakout board,1,6,10.99,Mic jack
+BT1,9V USB-C rechargeable lithium battery,1,VERIFY,25.00,Rechargeable lithium only
+BT1-CLIP,9V battery clip with leads,1,10,6.99,
+SW1,Latching power switch blue-lit guarded,1,6,14.39,
+SW2,16mm momentary push button green (START),1,5,5.75,D9
+SW3,16mm momentary push button red (STOP),1,5,5.75,D8
+LS1,Buzzer,1,5,8.69,D3
+D1,White LED panel-mount,1,5,6.99,D13
+CONN,2-pin wire connector/plug,3,30,6.99,Comes in pairs
+R1,10k 1% resistor,1,25,0.24,Battery divider top (9V to A1)
+R2a,2.2k 1% resistor,1,25,0.24,Battery divider bottom part 1 (2.2k + 4.7k = 6.9k)
+R2b,4.7k 1% resistor,1,25,0.24,Battery divider bottom part 2
+R3,100k 1% resistor,1,25,0.24,Mic bias divider top
+R4a,22k 1% resistor,1,25,0.24,Mic bias divider bottom part 1 (22k + 68k = 90k)
+R4b,68k 1% resistor,1,25,0.24,Mic bias divider bottom part 2
+R5,2.2k 1% resistor,1,25,0.24,Mic supply resistor
+C1,10uF electrolytic capacitor,1,10,3.99,Mic coupling cap
+ENC,3D-printed PLA+ enclosure (top + bottom),1,1,0.00,Printed in house
+HW1,M2x4 socket head screw,22,100,7.19,
+HW2,M2 flat washer,22,500,7.99,
+CLIP,Belt clip,1,VERIFY,14.95,
